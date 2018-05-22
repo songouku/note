@@ -108,3 +108,16 @@ rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 后台执行  James 
 nohup command > /opt/tools/james/james-2.3.2.1/bin/run.sh 2>&1 &
 ```
+
+查看端口占用
+===
+```text
+lsof -i:端口
+```
+
+shell
+===
+*** 查询 tomcat-dingding 所在的进程并且座位 kill-9  的参数，杀掉进程
+```text
+ps -ef|grep "tomcat-dingding"|grep -v grep |awk '{print $2}'|xargs kill -9
+```
